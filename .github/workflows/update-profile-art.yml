@@ -31,6 +31,7 @@ jobs:
         run: |
           python scripts/prep_photo.py
           python scripts/make_ascii_svg.py
+          python scripts/make_ascii_gif.py
           python scripts/make_info_card.py
           python scripts/fetch_contributions.py
           python scripts/render_heatmap_svg.py
@@ -41,11 +42,11 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           
-          git add avi-ascii.svg info-card.svg contrib-heatmap.svg stats-card.svg data/contributions.json source-photo.jpg source-prepped.png
+          git add avi-ascii.svg avi-ascii.gif info-card.svg contrib-heatmap.svg stats-card.svg data/contributions.json source-photo.jpg source-prepped.png
           
           if git diff --staged --quiet; then
             echo "No profile art or contribution changes detected."
           else
-            git commit -m "chore(profile): update automated profile SVGs and contribution heatmap [skip ci]"
+            git commit -m "chore(profile): update automated profile assets [skip ci]"
             git push
           fi
