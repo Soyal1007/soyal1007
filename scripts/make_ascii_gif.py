@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """
-make_ascii_gif.py: Converts any animated GIF (or photo sequence) into a luxury terminal ASCII animated GIF.
-Works with source.gif, source-video.mp4, or source-photo.jpg.
+make_ascii_gif.py: Converts MP4, GIF, MOV, or WEBM video files into an animated terminal ASCII GIF.
+Supports video files placed directly in the repository root.
 """
 
 import sys
 from pathlib import Path
+import cv2
+import numpy as np
 from PIL import Image, ImageDraw, ImageEnhance, ImageFont, ImageOps, ImageSequence
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
@@ -16,16 +18,12 @@ try:
 except ImportError:
     import config
 
-SOURCE_GIF_PATH = ROOT_DIR / "source.gif"
-SOURCE_PHOTO_PATH = ROOT_DIR / "source-photo.jpg"
 OUTPUT_GIF_PATH = ROOT_DIR / "avi-ascii.gif"
-OUTPUT_SVG_PATH = ROOT_DIR / "avi-ascii.svg"
-
 ASCII_RAMP = " .':-+=*#%@"
 
 
 def get_consolas_font(size: int) -> ImageFont.FreeTypeFont:
-    """Tries to load Consolas monospace font from Windows system font directory."""
+    """Tries to load Consolas monospace font from system directory."""
     font_paths = [
         "C:/Windows/Fonts/consola.ttf",
         "C:/Windows/Fonts/lucon.ttf",
@@ -40,7 +38,7 @@ def get_consolas_font(size: int) -> ImageFont.FreeTypeFont:
     return ImageFont.load_default()
 
 
-def process_frame_to_ascii(frame_img: Image.Image, width: int = 68, height: int = 46) -> list[str]:
+def process_pil_frame(frame_img: Image.Image, width: int = 68, height: int = 46) -> list[str]:
     """Crops, enhances, and converts a single PIL image frame to ASCII lines."""
     w, h = frame_img.size
     if h > w:
@@ -81,14 +79,12 @@ def render_ascii_card_frame(
     font_title = get_consolas_font(12)
     font_ascii = get_consolas_font(9)
 
-    # Terminal Header Bar (#161b22)
+    # Terminal Header Bar
     draw.rectangle([(0, 0), (card_width, 38)], fill="#161b22")
     draw.line([(0, 38), (card_width, 38)], fill="#30363d", width=1)
-
-    # Outer Border (#30363d)
     draw.rectangle([(0, 0), (card_width - 1, card_height - 1)], outline="#30363d", width=2)
 
-    # Window Control Dots (Red, Yellow, Green)
+    # Window Control Dots
     draw.ellipse([(17, 14), (27, 24)], fill="#ff5f56")
     draw.ellipse([(33, 14), (43, 24)], fill="#ffbd2e")
     draw.ellipse([(49, 14), (59, 24)], fill="#27c93f")
@@ -97,12 +93,10 @@ def render_ascii_card_frame(
     title_text = f"{config.USERNAME.lower()}@github:~$ cat ascii_video.gif"
     draw.text((120, 11), title_text, fill="#8b949e", font=font_title)
 
-    # ASCII Content Color Gradient per line (Cyan -> Amber -> Purple)
+    # ASCII Content Color Gradient per line
     start_x = 24
     start_y = 52
     line_spacing = 9.8
-
-    # Calculate glow/shimmer color shift per frame index
     colors = ["#00f2fe", "#4facfe", "#ffd700", "#ffbd2e", "#bc8cff"]
 
     for i, line in enumerate(ascii_lines):
@@ -111,49 +105,90 @@ def render_ascii_card_frame(
         y_pos = start_y + (i * line_spacing)
         draw.text((start_x, y_pos), line, fill=line_color, font=font_ascii)
 
-    # Subtle Scanline light bar moving across frames
+    # Scanline light bar
     scan_y = int(40 + ((frame_index / max(1, total_frames - 1)) * 450)) % 520
     draw.line([(2, scan_y), (card_width - 2, scan_y)], fill="#00f2fe", width=1)
 
     return card
 
 
+def extract_video_frames(video_path: Path, max_frames: int = 40) -> list[Image.Image]:
+    """Extracts frames uniformly from an MP4, MOV, WEBM video file using OpenCV."""
+    cap = cv2.VideoCapture(str(video_path))
+    if not cap.isOpened():
+        return []
+
+    total_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+    if total_count <= 0:
+        total_count = 100
+
+    step = max(1, total_count // max_frames)
+    frames = []
+
+    idx = 0
+    while cap.isOpened():
+        ret, frame = cap.read()
+        if not ret:
+            break
+        if idx % step == 0:
+            # OpenCV BGR -> RGB
+            rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            pil_img = Image.fromarray(rgb_frame)
+            frames.append(pil_img)
+            if len(frames) >= max_frames:
+                break
+        idx += 1
+
+    cap.release()
+    return frames
+
+
 def generate_ascii_gif() -> Path:
-    """Generates animated ASCII GIF from source.gif or source-photo.jpg."""
+    """Finds available video or GIF sources and generates avi-ascii.gif."""
+    video_extensions = [".mp4", ".gif", ".mov", ".webm", ".avi"]
+    found_file = None
+
+    for ext in video_extensions:
+        candidate = ROOT_DIR / f"source{ext}"
+        if candidate.exists():
+            found_file = candidate
+            break
+
     rendered_frames = []
 
-    if SOURCE_GIF_PATH.exists():
-        print(f"[*] Found input animation GIF at {SOURCE_GIF_PATH.name}, processing frames...")
-        with Image.open(SOURCE_GIF_PATH) as gif:
-            frames = [frame.copy() for frame in ImageSequence.Iterator(gif)]
+    if found_file:
+        print(f"[*] Found video/GIF source file at {found_file.name}, processing frames...")
+        if found_file.suffix.lower() == ".gif":
+            with Image.open(found_file) as gif:
+                raw_frames = [frame.copy() for frame in ImageSequence.Iterator(gif)]
+            step = max(1, len(raw_frames) // 40)
+            frames = raw_frames[::step][:40]
+        else:
+            frames = extract_video_frames(found_file, max_frames=40)
 
-        # Limit to max 40 frames for optimal GIF file size
-        step = max(1, len(frames) // 40)
-        selected_frames = frames[::step][:40]
-
-        total = len(selected_frames)
-        for idx, frame in enumerate(selected_frames):
-            ascii_lines = process_frame_to_ascii(frame)
+        total = len(frames)
+        for idx, frame in enumerate(frames):
+            ascii_lines = process_pil_frame(frame)
             card_img = render_ascii_card_frame(ascii_lines, idx, total)
             rendered_frames.append(card_img)
 
     else:
-        print(f"[*] Processing photo {SOURCE_PHOTO_PATH.name} into dynamic ASCII animation sequence...")
-        with Image.open(SOURCE_PHOTO_PATH) as photo:
-            base_ascii = process_frame_to_ascii(photo)
-
-        total_frames = 20
-        for idx in range(total_frames):
-            card_img = render_ascii_card_frame(base_ascii, idx, total_frames)
-            rendered_frames.append(card_img)
+        photo_path = ROOT_DIR / "source-photo.jpg"
+        print(f"[*] No video file found. Processing photo {photo_path.name}...")
+        if photo_path.exists():
+            with Image.open(photo_path) as photo:
+                base_ascii = process_pil_frame(photo)
+            total = 20
+            for idx in range(total):
+                card_img = render_ascii_card_frame(base_ascii, idx, total)
+                rendered_frames.append(card_img)
 
     if rendered_frames:
-        # Save as Animated GIF
         rendered_frames[0].save(
             OUTPUT_GIF_PATH,
             save_all=True,
             append_images=rendered_frames[1:],
-            duration=90,  # ~11 FPS
+            duration=90,
             loop=0,
             optimize=True,
         )
