@@ -1,0 +1,50 @@
+name: Update Profile Art & Activity
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight UTC
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r scripts/requirements.txt
+
+      - name: Update contribution data & SVGs
+        run: |
+          python scripts/prep_photo.py
+          python scripts/make_ascii_svg.py
+          python scripts/make_info_card.py
+          python scripts/fetch_contributions.py
+          python scripts/render_heatmap_svg.py
+
+      - name: Commit and push updated assets
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          git add avi-ascii.svg info-card.svg contrib-heatmap.svg data/contributions.json source-photo.jpg source-prepped.png
+          
+          if git diff --staged --quiet; then
+            echo "No profile art or contribution changes detected."
+          else
+            git commit -m "chore(profile): update automated profile SVGs and contribution heatmap [skip ci]"
+            git push
+          fi
