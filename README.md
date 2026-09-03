@@ -1,87 +1,118 @@
 <div align="center">
-  <h1>⚡ <code>soyal@github ~ $ whoami</code> ⚡</h1>
-  <p><strong>Soyal</strong> • Full-Stack &amp; Systems Engineer • India</p>
-  <p><em>Building intelligent applications, personal safety platforms &amp; modern developer tools.</em></p>
 
-  <p>
-    <a href="https://github.com/Soyal1007">
-      <img src="https://img.shields.io/badge/GitHub-Soyal1007-00f2fe?style=for-the-badge&logo=github&logoColor=black" alt="GitHub" />
-    </a>
-    &nbsp;
-    <a href="mailto:soyal@example.com">
-      <img src="https://img.shields.io/badge/Email-Contact_Me-ffd700?style=for-the-badge&logo=gmail&logoColor=black" alt="Email" />
-    </a>
-  </p>
-</div>
+<!-- BANNER: Typing header -->
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=3000&pause=800&color=00F2FE&center=true&vCenter=true&multiline=true&width=700&height=100&lines=Hi+👋+I'm+Soyal;Full-Stack+%26+Systems+Engineer;Building+the+Future%2C+One+Commit+at+a+Time)](https://git.io/typing-svg)
 
-<br />
+<br/>
 
-<!-- Hero Section: Animated ASCII Video & Terminal Info Card -->
-<p align="center">
-  <img src="./avi-ascii.gif?v=7" width="48%" alt="Soyal ASCII Video Portrait" />
-  &nbsp;&nbsp;
-  <img src="./info-card.svg?v=7" width="48%" alt="Soyal Developer Info Card" />
-</p>
-
-<br />
-
-<!-- Contribution Heatmap -->
-<div align="center">
-  <h2><code>git log --contributions --year</code></h2>
+<p>
   <a href="https://github.com/Soyal1007">
-    <img src="./contrib-heatmap.svg?v=7" alt="Soyal GitHub Contribution Heatmap" width="100%" />
+    <img src="https://img.shields.io/badge/GitHub-Soyal1007-00f2fe?style=for-the-badge&logo=github&logoColor=white" />
   </a>
+  &nbsp;
+  <img src="https://komarev.com/ghpvc/?username=Soyal1007&style=for-the-badge&color=ffd700&label=PROFILE+VIEWS" />
+</p>
+
 </div>
 
-<br />
+---
 
-## 🛠️ Tech Stack &amp; Ecosystem
+<!-- HERO: ASCII Video + Info Card -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50%" align="center" valign="top">
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart" />
-  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-</p>
+<img src="./avi-ascii.gif?v=8" width="100%" alt="Soyal — ASCII Video Portrait" />
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter" />
-  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
-</p>
+</td>
+<td width="50%" align="center" valign="top">
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=androidstudio&logoColor=white" alt="Android Studio" />
-  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase" />
-</p>
+<img src="./info-card.svg?v=8" width="100%" alt="Soyal — Developer Profile" />
 
-<br />
+</td>
+</tr>
+</table>
+
+---
+
+<!-- CONTRIBUTION HEATMAP -->
+<div align="center">
+
+### `git log --oneline --contributions --year`
+
+<a href="https://github.com/Soyal1007">
+  <img src="./contrib-heatmap.svg?v=8" alt="Contribution Heatmap" width="100%" />
+</a>
+
+</div>
+
+---
+
+## 🛠️ Tech Stack
+
+<div align="center">
+
+**Languages**
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+
+**Frameworks & Platforms**
+
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+
+**Tools & DevOps**
+
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Android Studio](https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=androidstudio&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+
+</div>
+
+---
 
 ## 🚀 Featured Projects
 
-| Project | Description | Tech Stack | Repository |
-| :--- | :--- | :--- | :--- |
-| 🛡️ **[RAKSHAK / SafeHer](https://github.com/Soyal1007/SafeHer-)** | Intelligent emergency protection system with voice-triggered SOS activation, live audio/video evidence capture & trusted contact dispatch. | `Flutter` • `Android` • `Firebase` | [Soyal1007/SafeHer-](https://github.com/Soyal1007/SafeHer-) |
-| 🖨️ **[smart-print](https://github.com/Soyal1007/smart-print)** | Automated smart printing & document transformation utility for CLI and automated workflows. | `Python` • `CLI` • `Automation` | [Soyal1007/smart-print](https://github.com/Soyal1007/smart-print) |
-| ⚡ **[Personal Command Center](https://github.com/Soyal1007)** | Feature-rich extension personal dashboard featuring rapid note capture, page saving, timeline search & local persistence. | `JavaScript` • `WebExtensions` | [Soyal1007](https://github.com/Soyal1007) |
-
-<br />
-
-## 📈 GitHub Analytics
-
 <div align="center">
-  <img src="./stats-card.svg?v=7" alt="Soyal GitHub Analytics & Stats" width="100%" />
+
+| &nbsp; | Project | Description | Stack |
+|:---:|:---|:---|:---|
+| 🛡️ | **[RAKSHAK / SafeHer](https://github.com/Soyal1007/SafeHer-)** | AI-powered emergency safety platform with voice-triggered SOS, live dual-cam evidence capture & WhatsApp/SMS dispatch | `Flutter` `Android` `Firebase` |
+| 🖨️ | **[smart-print](https://github.com/Soyal1007/smart-print)** | Automated smart printing & document pipeline CLI tool | `Python` `CLI` |
+| 🧠 | **[Personal Capture Engine](https://github.com/Soyal1007)** | Gesture-triggered floating overlay for instant expense, note & diary capture with SQLite backend | `Android` `Java` `SQLite` |
+| 🌐 | **[Brave Dashboard Extension](https://github.com/Soyal1007)** | Fully-featured personal command center browser extension with notes, page-saving & search | `JavaScript` `WebExtensions` |
+
 </div>
 
-<br />
+---
+
+## 📊 GitHub Analytics
 
 <div align="center">
-  <sub><em>Crafted with precision. Driven by curiosity, clean code, and continuous creation.</em></sub>
+  <img src="./stats-card.svg?v=8" alt="GitHub Analytics" width="100%" />
+</div>
+
+---
+
+<div align="center">
+
+**`>_ crafted with obsession · pushed with purpose`**
+
+*Building at the intersection of safety, intelligence & beautiful software.*
+
+[![GitHub followers](https://img.shields.io/github/followers/Soyal1007?style=social)](https://github.com/Soyal1007)
+&nbsp;
+[![GitHub stars](https://img.shields.io/github/stars/Soyal1007?style=social)](https://github.com/Soyal1007)
+
 </div>
