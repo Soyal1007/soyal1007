@@ -5,7 +5,7 @@ User can edit information here to automatically update generated profile assets.
 
 # GitHub Account Info
 USERNAME = "Soyal1007"
-FULL_NAME = "Soyal"
+FULL_NAME = "Soyal Binu"
 CURRENT_ROLE = "Software Engineer"
 LOCATION = "India"
 BIO = "Passionate developer crafting modern web applications, mobile platforms, and high-performance developer tools."
@@ -22,10 +22,9 @@ TECH_STACK = {
 # Social / Contact Links
 SOCIAL_LINKS = {
     "GitHub": f"https://github.com/{USERNAME}",
-    "Instagram": f"https://instagram.com/{USERNAME}",
-    "LinkedIn": f"https://linkedin.com/in/{USERNAME}",
-    "X": f"https://x.com/{USERNAME}",
-    "Email": "mailto:soyal@example.com",
+    "Instagram": "https://www.instagram.com/soyalbinu_2007/",
+    "LinkedIn": "https://www.linkedin.com/in/soyal-binu-37a895356",
+    "Email": "mailto:soyalbinu50@gmail.com",
 }
 
 # Featured Projects

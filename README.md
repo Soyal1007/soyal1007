@@ -10,20 +10,16 @@
 
 <!-- CONNECT WITH ME / SOCIALS -->
 <p align="center">
-  <a href="https://instagram.com/soyal1007" target="_blank">
+  <a href="https://www.instagram.com/soyalbinu_2007/" target="_blank">
     <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" alt="Instagram" />
   </a>
   &nbsp;
-  <a href="https://linkedin.com/in/soyal1007" target="_blank">
+  <a href="https://www.linkedin.com/in/soyal-binu-37a895356" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
   &nbsp;
-  <a href="https://x.com/soyal1007" target="_blank">
-    <img src="https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white" alt="X / Twitter" />
-  </a>
-  &nbsp;
-  <a href="mailto:soyal@example.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  <a href="mailto:soyalbinu50@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" />
   </a>
   &nbsp;
   <a href="https://github.com/Soyal1007">
@@ -42,12 +38,12 @@
 <tr>
 <td width="50%" align="center" valign="middle">
 
-<img src="./avi-ascii.gif?v=10" width="98%" alt="Soyal — ASCII Video Portrait" />
+<img src="./avi-ascii.gif?v=11" width="98%" alt="Soyal — ASCII Video Portrait" />
 
 </td>
 <td width="50%" align="center" valign="middle">
 
-<img src="./info-card.svg?v=10" width="98%" alt="Soyal — Developer Profile" />
+<img src="./info-card.svg?v=11" width="98%" alt="Soyal — Developer Profile" />
 
 </td>
 </tr>
@@ -61,7 +57,7 @@
 ### `git log --contributions --year`
 
 <a href="https://github.com/Soyal1007">
-  <img src="./contrib-heatmap.svg?v=10" alt="Contribution Heatmap" width="100%" />
+  <img src="./contrib-heatmap.svg?v=11" alt="Contribution Heatmap" width="100%" />
 </a>
 
 </div>
@@ -120,7 +116,7 @@
 ## 📊 GitHub Analytics
 
 <div align="center">
-  <img src="./stats-card.svg?v=10" alt="GitHub Analytics" width="100%" />
+  <img src="./stats-card.svg?v=11" alt="GitHub Analytics" width="100%" />
 </div>
 
 ---
@@ -129,12 +125,12 @@
 
 **`>_ crafted with obsession · pushed with purpose`**
 
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=social&logo=instagram)](https://instagram.com/soyal1007)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=social&logo=instagram)](https://www.instagram.com/soyalbinu_2007/)
 &nbsp;
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=social&logo=linkedin)](https://linkedin.com/in/soyal1007)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=social&logo=linkedin)](https://www.linkedin.com/in/soyal-binu-37a895356)
+&nbsp;
+[![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=social&logo=gmail)](mailto:soyalbinu50@gmail.com)
 &nbsp;
 [![GitHub followers](https://img.shields.io/github/followers/Soyal1007?style=social)](https://github.com/Soyal1007)
-&nbsp;
-[![GitHub stars](https://img.shields.io/github/stars/Soyal1007?style=social)](https://github.com/Soyal1007)
 
 </div>

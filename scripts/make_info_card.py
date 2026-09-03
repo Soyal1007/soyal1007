@@ -182,7 +182,7 @@ def generate_info_card_svg() -> Path:
 
     with open(OUTPUT_SVG_PATH, "w", encoding="utf-8") as f:
         f.write(svg)
-    print(f"[+] Premium Info Card SVG generated → {OUTPUT_SVG_PATH.name}")
+    print(f"[+] Premium Info Card SVG generated -> {OUTPUT_SVG_PATH.name}")
     return OUTPUT_SVG_PATH
 
 

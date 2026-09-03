@@ -59,7 +59,7 @@
   <!-- Name -->
   <g transform="translate(20, 114)">
     <text x="0" y="0" fill="#6e7681" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12px" font-weight="600">  NAME</text>
-    <text x="110" y="0" fill="#ffd700" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="13px" font-weight="700">Soyal</text>
+    <text x="110" y="0" fill="#ffd700" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="13px" font-weight="700">Soyal Binu</text>
   </g>
 
   <!-- Role -->
