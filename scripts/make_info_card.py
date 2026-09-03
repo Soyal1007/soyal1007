@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-make_info_card.py: Generates an animated terminal info card SVG.
+make_info_card.py: Generates an animated luxury terminal info card SVG.
+Uses opacity: 1 base styling to guarantee 100% visibility on GitHub markdown.
 """
 
 import sys
@@ -18,77 +19,67 @@ OUTPUT_SVG_PATH = ROOT_DIR / "info-card.svg"
 
 
 def generate_info_card_svg() -> Path:
-    """Generates the animated terminal info card SVG."""
-    svg_width = 460
-    svg_height = 500
+    """Generates the luxury animated terminal info card SVG."""
+    # Match avi-ascii.svg dimensions exactly (480x520) for perfect side-by-side alignment!
+    svg_width = 480
+    svg_height = 520
 
-    # Information items to render
     tech_langs = ", ".join(config.TECH_STACK.get("Languages", [])[:4])
     tech_fw = ", ".join(config.TECH_STACK.get("Frameworks", [])[:3])
-    
+
     svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {svg_width} {svg_height}" width="{svg_width}" height="{svg_height}">
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0d1117" />
       <stop offset="100%" stop-color="#161b22" />
     </linearGradient>
 
     <!-- Accent Gradient -->
-    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#58a6ff" />
+    <linearGradient id="accent-gold-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
       <stop offset="50%" stop-color="#3fb950" />
-      <stop offset="100%" stop-color="#bc8cff" />
+      <stop offset="100%" stop-color="#ffd700" />
     </linearGradient>
 
     <style>
-      .card-rect {{ fill: url(#card-bg); rx: 12px; ry: 12px; stroke: #30363d; stroke-width: 1.5px; }}
-      .header-bg {{ fill: #161b22; }}
+      /* BASE STYLING: Guaranteed 100% visible on GitHub (opacity: 1) */
+      .card-box {{ fill: url(#card-bg); rx: 14px; ry: 14px; stroke: #30363d; stroke-width: 1.5px; opacity: 1; }}
+      .header-bar {{ fill: #161b22; opacity: 1; }}
+      
       .dot-red {{ fill: #ff5f56; }}
       .dot-yellow {{ fill: #ffbd2e; }}
       .dot-green {{ fill: #27c93f; }}
-      
-      .font-mono {{ font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace; }}
-      .header-title {{ font-size: 11px; fill: #8b949e; font-weight: 600; }}
 
-      .prompt-user {{ fill: #58a6ff; font-weight: 700; font-size: 13px; }}
-      .prompt-host {{ fill: #3fb950; font-weight: 700; font-size: 13px; }}
-      .prompt-cmd {{ fill: #c9d1d9; font-weight: 600; font-size: 13px; }}
+      .font-mono {{ font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace; }}
+      .header-title {{ font-size: 11.5px; fill: #8b949e; font-weight: 600; }}
 
-      .label {{ fill: #8b949e; font-size: 12.5px; font-weight: 600; }}
-      .val-blue {{ fill: #58a6ff; font-size: 12.5px; font-weight: 500; }}
-      .val-green {{ fill: #3fb950; font-size: 12.5px; font-weight: 500; }}
-      .val-purple {{ fill: #bc8cff; font-size: 12.5px; font-weight: 500; }}
-      .val-orange {{ fill: #f0883e; font-size: 12.5px; font-weight: 500; }}
-      .val-white {{ fill: #e6edf3; font-size: 12.5px; font-weight: 500; }}
+      /* Command Prompt */
+      .prompt-user {{ fill: #00f2fe; font-weight: 700; font-size: 13px; opacity: 1; }}
+      .prompt-host {{ fill: #3fb950; font-weight: 700; font-size: 13px; opacity: 1; }}
+      .prompt-cmd {{ fill: #e6edf3; font-weight: 600; font-size: 13px; opacity: 1; }}
 
-      .badge {{ fill: #21262d; stroke: #30363d; stroke-width: 1px; rx: 4px; ry: 4px; }}
-      .badge-text {{ fill: #58a6ff; font-size: 11px; font-weight: 600; }}
+      /* Labels & Values */
+      .label {{ fill: #8b949e; font-size: 13px; font-weight: 600; opacity: 1; }}
+      .val-cyan {{ fill: #00f2fe; font-size: 13px; font-weight: 600; opacity: 1; }}
+      .val-green {{ fill: #3fb950; font-size: 13px; font-weight: 600; opacity: 1; }}
+      .val-gold {{ fill: #ffd700; font-size: 13px; font-weight: 600; opacity: 1; }}
+      .val-purple {{ fill: #bc8cff; font-size: 13px; font-weight: 600; opacity: 1; }}
+      .val-white {{ fill: #f0f6fc; font-size: 13px; font-weight: 500; opacity: 1; }}
 
-      /* Keyframe Animations */
-      .fade-line {{
-        opacity: 0;
-        animation: fadeInLine 0.6s ease-out forwards;
-      }}
+      /* Badges */
+      .badge-bg {{ fill: #161b22; stroke: #30363d; stroke-width: 1.2px; rx: 6px; ry: 6px; opacity: 1; }}
+      .badge-gold {{ fill: #161b22; stroke: #ffd700; stroke-width: 1.2px; rx: 6px; ry: 6px; opacity: 1; }}
+      .badge-cyan {{ fill: #161b22; stroke: #00f2fe; stroke-width: 1.2px; rx: 6px; ry: 6px; opacity: 1; }}
 
-      .line-1 {{ animation-delay: 0.2s; }}
-      .line-2 {{ animation-delay: 0.5s; }}
-      .line-3 {{ animation-delay: 0.8s; }}
-      .line-4 {{ animation-delay: 1.1s; }}
-      .line-5 {{ animation-delay: 1.4s; }}
-      .line-6 {{ animation-delay: 1.7s; }}
-      .line-7 {{ animation-delay: 2.0s; }}
-      .line-8 {{ animation-delay: 2.3s; }}
-      .line-9 {{ animation-delay: 2.6s; }}
+      .badge-text-gold {{ fill: #ffd700; font-size: 11.5px; font-weight: 700; opacity: 1; }}
+      .badge-text-cyan {{ fill: #00f2fe; font-size: 11.5px; font-weight: 700; opacity: 1; }}
 
+      /* Animations: Non-destructive overlays & blinking cursor */
       .cursor {{
-        fill: #58a6ff;
+        fill: #00f2fe;
         animation: blink 1s step-end infinite;
-      }}
-
-      @keyframes fadeInLine {{
-        from {{ opacity: 0; transform: translateY(4px); }}
-        to {{ opacity: 1; transform: translateY(0); }}
       }}
 
       @keyframes blink {{
@@ -97,85 +88,85 @@ def generate_info_card_svg() -> Path:
     </style>
   </defs>
 
-  <!-- Base Card -->
-  <rect class="card-rect" width="{svg_width}" height="{svg_height}" x="0" y="0" />
+  <!-- Container -->
+  <rect class="card-box" width="{svg_width}" height="{svg_height}" x="0" y="0" />
 
-  <!-- Window Header -->
-  <path d="M 0 12 C 0 5.37 5.37 0 12 0 L {svg_width - 12} 0 C {svg_width - 5.37} 0 {svg_width} 5.37 {svg_width} 12 L {svg_width} 36 L 0 36 Z" class="header-bg" />
-  <line x1="0" y1="36" x2="{svg_width}" y2="36" stroke="#30363d" stroke-width="1" />
-  
-  <circle class="dot-red" cx="20" cy="18" r="5" />
-  <circle class="dot-yellow" cx="36" cy="18" r="5" />
-  <circle class="dot-green" cx="52" cy="18" r="5" />
-  
-  <text class="font-mono header-title" x="{svg_width / 2}" y="22" text-anchor="middle">developer_info.sh</text>
+  <!-- Header Bar -->
+  <path d="M 0 14 C 0 6.27 6.27 0 14 0 L {svg_width - 14} 0 C {svg_width - 6.27} 0 {svg_width} 6.27 {svg_width} 14 L {svg_width} 38 L 0 38 Z" class="header-bar" />
+  <line x1="0" y1="38" x2="{svg_width}" y2="38" stroke="#30363d" stroke-width="1" />
 
-  <!-- Terminal Command Line Prompt -->
-  <g class="font-mono fade-line line-1" transform="translate(24, 66)">
+  <circle class="dot-red" cx="22" cy="19" r="5" />
+  <circle class="dot-yellow" cx="38" cy="19" r="5" />
+  <circle class="dot-green" cx="54" cy="19" r="5" />
+
+  <text class="font-mono header-title" x="{svg_width / 2}" y="23" text-anchor="middle">developer_profile.sh</text>
+
+  <!-- Command Line Prompt -->
+  <g class="font-mono" transform="translate(24, 70)">
     <text class="prompt-user" x="0" y="0">{config.USERNAME.lower()}</text>
-    <text class="prompt-cmd" x="72" y="0">@github:~$ whoami --verbose</text>
+    <text class="prompt-cmd" x="76" y="0">@github:~$ whoami --verbose</text>
   </g>
 
-  <!-- Separator Line -->
-  <line class="fade-line line-2" x1="24" y1="80" x2="{svg_width - 24}" y2="80" stroke="url(#accent-grad)" stroke-width="1.5" stroke-dasharray="4 2" />
+  <!-- Accent Divider -->
+  <line x1="24" y1="84" x2="{svg_width - 24}" y2="84" stroke="url(#accent-gold-cyan)" stroke-width="1.5" stroke-dasharray="4 2" />
 
-  <!-- Card Details Grid -->
+  <!-- Developer Attributes Grid -->
   <!-- Name -->
-  <g class="font-mono fade-line line-2" transform="translate(24, 114)">
+  <g class="font-mono" transform="translate(24, 120)">
     <text class="label" x="0" y="0">👤 Name:</text>
-    <text class="val-white" x="120" y="0">{config.FULL_NAME}</text>
+    <text class="val-gold" x="130" y="0">{config.FULL_NAME}</text>
   </g>
 
   <!-- Role -->
-  <g class="font-mono fade-line line-3" transform="translate(24, 150)">
+  <g class="font-mono" transform="translate(24, 158)">
     <text class="label" x="0" y="0">⚡ Role:</text>
-    <text class="val-blue" x="120" y="0">Full-Stack &amp; Software Dev</text>
+    <text class="val-cyan" x="130" y="0">Full-Stack &amp; Systems Dev</text>
   </g>
 
   <!-- Focus -->
-  <g class="font-mono fade-line line-4" transform="translate(24, 186)">
+  <g class="font-mono" transform="translate(24, 196)">
     <text class="label" x="0" y="0">🎯 Focus:</text>
-    <text class="val-green" x="120" y="0">Safety Systems &amp; Web Apps</text>
+    <text class="val-green" x="130" y="0">Safety Platforms &amp; Web Apps</text>
   </g>
 
   <!-- Languages -->
-  <g class="font-mono fade-line line-5" transform="translate(24, 222)">
+  <g class="font-mono" transform="translate(24, 234)">
     <text class="label" x="0" y="0">💻 Stack:</text>
-    <text class="val-purple" x="120" y="0">{tech_langs}</text>
+    <text class="val-purple" x="130" y="0">{tech_langs}</text>
   </g>
 
   <!-- Frameworks -->
-  <g class="font-mono fade-line line-6" transform="translate(24, 258)">
+  <g class="font-mono" transform="translate(24, 272)">
     <text class="label" x="0" y="0">🚀 Frameworks:</text>
-    <text class="val-orange" x="120" y="0">{tech_fw}</text>
+    <text class="val-white" x="130" y="0">{tech_fw}</text>
   </g>
 
-  <!-- Status / Location -->
-  <g class="font-mono fade-line line-7" transform="translate(24, 294)">
+  <!-- Location -->
+  <g class="font-mono" transform="translate(24, 310)">
     <text class="label" x="0" y="0">📍 Location:</text>
-    <text class="val-white" x="120" y="0">{config.LOCATION}</text>
+    <text class="val-gold" x="130" y="0">{config.LOCATION}</text>
   </g>
 
-  <!-- Major Project Highlight -->
-  <g class="font-mono fade-line line-8" transform="translate(24, 340)">
+  <!-- Featured Highlights -->
+  <g class="font-mono" transform="translate(24, 356)">
     <text class="label" x="0" y="0">🌟 Highlight:</text>
-    <rect class="badge" x="120" y="-14" width="140" height="22" />
-    <text class="badge-text" x="128" y="1">RAKSHAK / SafeHer</text>
+    <rect class="badge-gold" x="130" y="-15" width="146" height="23" />
+    <text class="badge-text-gold" x="138" y="0">RAKSHAK / SafeHer</text>
   </g>
 
-  <g class="font-mono fade-line line-8" transform="translate(24, 380)">
+  <g class="font-mono" transform="translate(24, 396)">
     <text class="label" x="0" y="0">📦 Utilities:</text>
-    <rect class="badge" x="120" y="-14" width="105" height="22" />
-    <text class="badge-text" x="128" y="1">smart-print</text>
+    <rect class="badge-cyan" x="130" y="-15" width="110" height="23" />
+    <text class="badge-text-cyan" x="138" y="0">smart-print</text>
   </g>
 
-  <!-- Terminal Output Bottom Section -->
-  <line class="fade-line line-9" x1="24" y1="420" x2="{svg_width - 24}" y2="420" stroke="#30363d" stroke-width="1" />
-  
-  <g class="font-mono fade-line line-9" transform="translate(24, 452)">
+  <!-- Terminal Status Footer -->
+  <line x1="24" y1="436" x2="{svg_width - 24}" y2="436" stroke="#30363d" stroke-width="1" />
+
+  <g class="font-mono" transform="translate(24, 472)">
     <text class="prompt-host" x="0" y="0">SYSTEM READY.</text>
-    <text class="prompt-cmd" x="120" y="0">Listening for events...</text>
-    <rect class="cursor" x="310" y="-11" width="8" height="14" />
+    <text class="prompt-cmd" x="130" y="0">Listening for events...</text>
+    <rect class="cursor" x="325" y="-11" width="8" height="15" />
   </g>
 
 </svg>
@@ -184,7 +175,7 @@ def generate_info_card_svg() -> Path:
     with open(OUTPUT_SVG_PATH, "w", encoding="utf-8") as f:
         f.write(svg_content)
 
-    print(f"[+] Animated Info Card SVG generated at {OUTPUT_SVG_PATH.name}")
+    print(f"[+] Luxury Animated Info Card SVG generated at {OUTPUT_SVG_PATH.name}")
     return OUTPUT_SVG_PATH
 
 

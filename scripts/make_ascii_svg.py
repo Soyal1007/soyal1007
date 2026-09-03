@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-make_ascii_svg.py: Converts source photo into an animated ASCII SVG portrait.
+make_ascii_svg.py: Converts preprocessed photo into an animated luxury ASCII SVG portrait.
+Ensures full opacity visibility on GitHub with subtle glow animations.
 """
 
 import sys
@@ -18,16 +19,16 @@ except ImportError:
 
 OUTPUT_SVG_PATH = ROOT_DIR / "avi-ascii.svg"
 
-# Carefully tuned ASCII density ramp (from darkest/bg to brightest pixels)
+# Fine-tuned ASCII ramp for realistic facial shading
 ASCII_RAMP = " .':-+=*#%@"
 
 
 def image_to_ascii(img: Image.Image) -> list[str]:
-    """Converts a grayscale PIL Image to a list of ASCII strings."""
+    """Converts a grayscale PIL Image into ASCII string lines."""
     width, height = img.size
     pixels = img.load()
     ascii_lines = []
-    
+
     ramp_len = len(ASCII_RAMP)
     for y in range(height):
         line_chars = []
@@ -39,106 +40,113 @@ def image_to_ascii(img: Image.Image) -> list[str]:
     return ascii_lines
 
 
-def generate_ascii_svg(width: int = 68, height: int = 48) -> Path:
-    """Generates the animated ASCII SVG portrait."""
-    # Ensure prepped photo exists
+def generate_ascii_svg(width: int = 74, height: int = 52) -> Path:
+    """Generates the luxury animated ASCII SVG portrait."""
     prepped_img = prep_photo.prep_photo(target_width=width, target_height=height)
     ascii_lines = image_to_ascii(prepped_img)
 
-    # SVG Container dimensions
-    svg_width = 460
-    svg_height = 500
-    
-    # Text positioning calculations
-    start_x = 24
-    start_y = 58
-    line_height = 8.8
-    font_size = 7.5
+    # Card Dimensions (matches info-card.svg height perfectly: 480x520)
+    svg_width = 480
+    svg_height = 520
 
-    # Escape XML characters in ASCII output
+    start_x = 22
+    start_y = 56
+    line_height = 8.6
+    font_size = 7.6
+
     escaped_lines = []
     for line in ascii_lines:
         escaped = line.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace(" ", "&#160;")
         escaped_lines.append(escaped)
 
-    # Build SVG content with responsive glassmorphism & subtle animation
     svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {svg_width} {svg_height}" width="{svg_width}" height="{svg_height}">
   <defs>
     <!-- Background Gradient -->
-    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d1117" />
+    <linearGradient id="ascii-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0d1117" />
       <stop offset="100%" stop-color="#161b22" />
     </linearGradient>
 
-    <!-- Text Glow & Color Gradient -->
-    <linearGradient id="ascii-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#58a6ff" />
-      <stop offset="50%" stop-color="#3fb950" />
+    <!-- Luxury Multi-Tone ASCII Text Gradient -->
+    <linearGradient id="portrait-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="35%" stop-color="#4facfe" />
+      <stop offset="70%" stop-color="#ffd700" />
       <stop offset="100%" stop-color="#bc8cff" />
     </linearGradient>
 
     <!-- Scanline Sweep Gradient -->
-    <linearGradient id="scan-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="rgba(88, 166, 255, 0.0)" />
-      <stop offset="50%" stop-color="rgba(88, 166, 255, 0.15)" />
-      <stop offset="100%" stop-color="rgba(88, 166, 255, 0.0)" />
+    <linearGradient id="scan-glow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(0, 242, 254, 0.0)" />
+      <stop offset="50%" stop-color="rgba(0, 242, 254, 0.15)" />
+      <stop offset="100%" stop-color="rgba(0, 242, 254, 0.0)" />
     </linearGradient>
 
     <style>
-      .bg {{ fill: url(#bg-grad); rx: 12px; ry: 12px; stroke: #30363d; stroke-width: 1.5px; }}
-      .title-bar {{ fill: #161b22; rx: 12px; ry: 12px; }}
+      /* BASE STYLING: Always Visible (opacity: 1) for GitHub compatibility */
+      .card-box {{ fill: url(#ascii-bg); rx: 14px; ry: 14px; stroke: #30363d; stroke-width: 1.5px; }}
+      .header-bar {{ fill: #161b22; }}
+      
       .dot-red {{ fill: #ff5f56; }}
       .dot-yellow {{ fill: #ffbd2e; }}
       .dot-green {{ fill: #27c93f; }}
-      .title-text {{ font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size: 11px; fill: #8b949e; font-weight: 600; }}
       
-      .ascii-text {{
+      .header-title {{
+        font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
+        font-size: 11.5px;
+        fill: #8b949e;
+        font-weight: 600;
+      }}
+
+      .ascii-art {{
         font-family: 'Courier New', Consolas, 'Fira Code', monospace;
         font-size: {font_size}px;
-        fill: url(#ascii-grad);
-        letter-spacing: 1.2px;
+        fill: url(#portrait-grad);
+        letter-spacing: 1.1px;
         white-space: pre;
-        animation: pulseGlow 4s ease-in-out infinite alternate;
+        opacity: 1; /* Guaranteed visible on GitHub */
+        animation: pulseShine 4s ease-in-out infinite alternate;
       }}
 
-      .scanline {{
-        fill: url(#scan-grad);
-        animation: scanSweep 6s linear infinite;
+      .scanline-overlay {{
+        fill: url(#scan-glow);
+        animation: sweepMotion 6s linear infinite;
       }}
 
-      @keyframes pulseGlow {{
-        0% {{ opacity: 0.88; filter: drop-shadow(0 0 1px rgba(88, 166, 255, 0.2)); }}
-        50% {{ opacity: 1.0; filter: drop-shadow(0 0 4px rgba(63, 185, 80, 0.4)); }}
-        100% {{ opacity: 0.88; filter: drop-shadow(0 0 2px rgba(188, 140, 255, 0.3)); }}
+      @keyframes pulseShine {{
+        0% {{ filter: drop-shadow(0 0 1px rgba(0, 242, 254, 0.3)); }}
+        50% {{ filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5)); }}
+        100% {{ filter: drop-shadow(0 0 2px rgba(188, 140, 255, 0.4)); }}
       }}
 
-      @keyframes scanSweep {{
+      @keyframes sweepMotion {{
         0% {{ transform: translateY(0px); }}
-        100% {{ transform: translateY(440px); }}
+        100% {{ transform: translateY(460px); }}
       }}
     </style>
   </defs>
 
-  <!-- Card Background -->
-  <rect class="bg" width="{svg_width}" height="{svg_height}" x="0" y="0" />
-  
-  <!-- Window Header Bar -->
-  <path d="M 0 12 C 0 5.37 5.37 0 12 0 L {svg_width - 12} 0 C {svg_width - 5.37} 0 {svg_width} 5.37 {svg_width} 12 L {svg_width} 36 L 0 36 Z" fill="#161b22" />
-  <line x1="0" y1="36" x2="{svg_width}" y2="36" stroke="#30363d" stroke-width="1" />
-  
+  <!-- Main Glassmorphic Container -->
+  <rect class="card-box" width="{svg_width}" height="{svg_height}" x="0" y="0" />
+
+  <!-- Terminal Header Bar -->
+  <path d="M 0 14 C 0 6.27 6.27 0 14 0 L {svg_width - 14} 0 C {svg_width - 6.27} 0 {svg_width} 6.27 {svg_width} 14 L {svg_width} 38 L 0 38 Z" class="header-bar" />
+  <line x1="0" y1="38" x2="{svg_width}" y2="38" stroke="#30363d" stroke-width="1" />
+
   <!-- Terminal Window Controls -->
-  <circle class="dot-red" cx="20" cy="18" r="5" />
-  <circle class="dot-yellow" cx="36" cy="18" r="5" />
-  <circle class="dot-green" cx="52" cy="18" r="5" />
-  
-  <!-- Terminal Header Title -->
-  <text class="title-text" x="{svg_width / 2}" y="22" text-anchor="middle">{config.USERNAME.lower()}@github:~$ cat ascii_portrait.txt</text>
+  <circle class="dot-red" cx="22" cy="19" r="5" />
+  <circle class="dot-yellow" cx="38" cy="19" r="5" />
+  <circle class="dot-green" cx="54" cy="19" r="5" />
 
-  <!-- Animated Scanline Sweep overlay -->
-  <rect class="scanline" x="2" y="37" width="{svg_width - 4}" height="60" pointer-events="none" />
+  <!-- Header Title -->
+  <text class="header-title" x="{svg_width / 2}" y="23" text-anchor="middle">{config.USERNAME.lower()}@github:~$ cat portrait_matrix.txt</text>
 
-  <!-- ASCII Art Body -->
-  <text class="ascii-text">
+  <!-- Scanline Sweep Animation Overlay -->
+  <rect class="scanline-overlay" x="2" y="39" width="{svg_width - 4}" height="60" pointer-events="none" />
+
+  <!-- ASCII Art Content -->
+  <text class="ascii-art">
 """
 
     for i, line in enumerate(escaped_lines):

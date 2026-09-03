@@ -1,24 +1,27 @@
 <div align="center">
-  <h1><code>soyal@github ~ $ whoami</code></h1>
-  <p><strong>Full-Stack Developer & Software Engineer</strong> • India</p>
-  <p><em>Building intelligent applications, personal safety systems &amp; modern developer tools.</em></p>
+  <h1>⚡ <code>soyal@github ~ $ whoami</code> ⚡</h1>
+  <p><strong>Soyal</strong> • Full-Stack &amp; Systems Engineer • India</p>
+  <p><em>Building intelligent applications, personal safety platforms &amp; modern developer tools.</em></p>
+
+  <p>
+    <a href="https://github.com/Soyal1007">
+      <img src="https://img.shields.io/badge/GitHub-Soyal1007-00f2fe?style=for-the-badge&logo=github&logoColor=black" alt="GitHub" />
+    </a>
+    &nbsp;
+    <a href="mailto:soyal@example.com">
+      <img src="https://img.shields.io/badge/Email-Contact_Me-ffd700?style=for-the-badge&logo=gmail&logoColor=black" alt="Email" />
+    </a>
+  </p>
 </div>
 
 <br />
 
-<!-- Hero Section: ASCII Art Portrait & Interactive Info Card -->
-<div align="center">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td width="50%" align="center" valign="top">
-        <img src="./avi-ascii.svg" alt="Soyal ASCII Portrait" width="100%" />
-      </td>
-      <td width="50%" align="center" valign="top">
-        <img src="./info-card.svg" alt="Soyal Developer Info Card" width="100%" />
-      </td>
-    </tr>
-  </table>
-</div>
+<!-- Hero Section: Perfectly Aligned Side-by-Side Cards (No Table Border Artifacts) -->
+<p align="center">
+  <img src="./avi-ascii.svg" width="48%" alt="Soyal ASCII Portrait" />
+  &nbsp;&nbsp;
+  <img src="./info-card.svg" width="48%" alt="Soyal Developer Info Card" />
+</p>
 
 <br />
 
@@ -34,86 +37,52 @@
 
 ## 🛠️ Tech Stack &amp; Ecosystem
 
-<table width="100%">
-  <tr>
-    <td width="25%" valign="top">
-      <h4>Languages</h4>
-      <ul>
-        <li><code>Python</code></li>
-        <li><code>JavaScript (ES6+)</code></li>
-        <li><code>TypeScript</code></li>
-        <li><code>Dart</code></li>
-        <li><code>C++</code></li>
-        <li><code>HTML5 / CSS3</code></li>
-      </ul>
-    </td>
-    <td width="25%" valign="top">
-      <h4>Frameworks</h4>
-      <ul>
-        <li><code>Flutter</code></li>
-        <li><code>React.js</code></li>
-        <li><code>Next.js</code></li>
-        <li><code>Node.js</code></li>
-        <li><code>Express</code></li>
-      </ul>
-    </td>
-    <td width="25%" valign="top">
-      <h4>Tools &amp; DevOps</h4>
-      <ul>
-        <li><code>Git &amp; GitHub</code></li>
-        <li><code>GitHub Actions</code></li>
-        <li><code>Docker</code></li>
-        <li><code>VS Code</code></li>
-        <li><code>Android Studio</code></li>
-      </ul>
-    </td>
-    <td width="25%" valign="top">
-      <h4>Databases &amp; Cloud</h4>
-      <ul>
-        <li><code>SQLite</code></li>
-        <li><code>PostgreSQL</code></li>
-        <li><code>MongoDB</code></li>
-        <li><code>Firebase</code></li>
-      </ul>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart" />
+  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++" />
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter" />
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+  <img src="https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=androidstudio&logoColor=white" alt="Android Studio" />
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase" />
+</p>
 
 <br />
 
 ## 🚀 Featured Projects
 
-| Project | Description | Primary Tech Stack | Repository |
+| Project | Description | Tech Stack | Repository |
 | :--- | :--- | :--- | :--- |
-| 🛡️ **[RAKSHAK / SafeHer](https://github.com/Soyal1007/SafeHer-)** | Intelligent emergency protection system with automated voice triggers, live evidence vault & trusted contact dispatch. | `Flutter` • `Android` • `Firebase` | [Soyal1007/SafeHer-](https://github.com/Soyal1007/SafeHer-) |
-| 🖨️ **[smart-print](https://github.com/Soyal1007/smart-print)** | Smart printing utility for automated document optimization & CLI workflows. | `Python` • `CLI` • `Automation` | [Soyal1007/smart-print](https://github.com/Soyal1007/smart-print) |
-| ⚡ **[Personal Command Center](https://github.com/Soyal1007)** | Feature-rich extension personal dashboard with real-time capture, note engine & search. | `JavaScript` • `WebExtensions` | [Soyal1007](https://github.com/Soyal1007) |
+| 🛡️ **[RAKSHAK / SafeHer](https://github.com/Soyal1007/SafeHer-)** | Intelligent emergency protection system with voice-triggered SOS activation, live audio/video evidence capture & trusted contact dispatch. | `Flutter` • `Android` • `Firebase` | [Soyal1007/SafeHer-](https://github.com/Soyal1007/SafeHer-) |
+| 🖨️ **[smart-print](https://github.com/Soyal1007/smart-print)** | Automated smart printing & document transformation utility for CLI and automated workflows. | `Python` • `CLI` • `Automation` | [Soyal1007/smart-print](https://github.com/Soyal1007/smart-print) |
+| ⚡ **[Personal Command Center](https://github.com/Soyal1007)** | Feature-rich extension personal dashboard featuring rapid note capture, page saving, timeline search & local persistence. | `JavaScript` • `WebExtensions` | [Soyal1007](https://github.com/Soyal1007) |
 
 <br />
 
-## 📈 GitHub Activity &amp; Overview
+## 📈 GitHub Analytics
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Soyal1007&show_icons=true&theme=dark&bg_color=0d1117&title_color=58a6ff&icon_color=3fb950&text_color=c9d1d9&border_color=30363d" alt="Soyal GitHub Stats" width="48%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Soyal1007&layout=compact&theme=dark&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&border_color=30363d" alt="Top Languages" width="48%" />
-</div>
-
-<br />
-
-## 📬 Connect With Me
-
-<div align="center">
-  <a href="https://github.com/Soyal1007">
-    <img src="https://img.shields.io/badge/GitHub-Soyal1007-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="mailto:soyal@example.com">
-    <img src="https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
+  <img src="https://github-readme-stats.vercel.app/api?username=Soyal1007&show_icons=true&theme=dark&bg_color=090d16&title_color=00f2fe&icon_color=ffd700&text_color=e6edf3&border_color=30363d" alt="Soyal GitHub Stats" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Soyal1007&layout=compact&theme=dark&bg_color=090d16&title_color=00f2fe&text_color=e6edf3&border_color=30363d" alt="Top Languages" width="48%" />
 </div>
 
 <br />
 
 <div align="center">
-  <sub><em>Designed with precision. Driven by curiosity and clean code.</em></sub>
+  <sub><em>Crafted with precision. Driven by curiosity, clean code, and continuous creation.</em></sub>
 </div>
