@@ -1,7 +1,10 @@
 <div align="center">
 
-<!-- BANNER: Typing header -->
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=3000&pause=800&color=00F2FE&center=true&vCenter=true&multiline=true&width=700&height=100&lines=Hi+👋+I'm+Soyal;Full-Stack+%26+Systems+Engineer;Building+the+Future%2C+One+Commit+at+a+Time)](https://git.io/typing-svg)
+<!-- BANNER: Animated Typing Header — Orbitron font, single clean intro -->
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Orbitron&weight=900&size=36&duration=2500&pause=1200&color=00F2FE&center=true&vCenter=true&multiline=false&width=600&height=70&lines=Hi+%F0%9F%91%8B+I'm+Soyal.)](https://git.io/typing-svg)
+
+<!-- Subtitle in a smaller, elegant font -->
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=500&size=18&duration=3000&pause=1500&color=8B949E&center=true&vCenter=true&multiline=false&width=600&height=40&lines=crafting+intelligent+software+%F0%9F%9A%80;building+tools+that+matter+%E2%9A%A1;pushing+commits%2C+not+limits+%F0%9F%94%A5)](https://git.io/typing-svg)
 
 <br/>
 
@@ -18,16 +21,16 @@
 ---
 
 <!-- HERO: ASCII Video + Info Card -->
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<table width="100%" border="0" cellspacing="8" cellpadding="8">
 <tr>
-<td width="50%" align="center" valign="top">
+<td width="50%" align="center" valign="middle">
 
-<img src="./avi-ascii.gif?v=8" width="100%" alt="Soyal — ASCII Video Portrait" />
+<img src="./avi-ascii.gif?v=9" width="98%" alt="Soyal — ASCII Video Portrait" />
 
 </td>
-<td width="50%" align="center" valign="top">
+<td width="50%" align="center" valign="middle">
 
-<img src="./info-card.svg?v=8" width="100%" alt="Soyal — Developer Profile" />
+<img src="./info-card.svg?v=9" width="98%" alt="Soyal — Developer Profile" />
 
 </td>
 </tr>
@@ -38,10 +41,10 @@
 <!-- CONTRIBUTION HEATMAP -->
 <div align="center">
 
-### `git log --oneline --contributions --year`
+### `git log --contributions --year`
 
 <a href="https://github.com/Soyal1007">
-  <img src="./contrib-heatmap.svg?v=8" alt="Contribution Heatmap" width="100%" />
+  <img src="./contrib-heatmap.svg?v=9" alt="Contribution Heatmap" width="100%" />
 </a>
 
 </div>
@@ -100,7 +103,7 @@
 ## 📊 GitHub Analytics
 
 <div align="center">
-  <img src="./stats-card.svg?v=8" alt="GitHub Analytics" width="100%" />
+  <img src="./stats-card.svg?v=9" alt="GitHub Analytics" width="100%" />
 </div>
 
 ---
@@ -108,8 +111,6 @@
 <div align="center">
 
 **`>_ crafted with obsession · pushed with purpose`**
-
-*Building at the intersection of safety, intelligence & beautiful software.*
 
 [![GitHub followers](https://img.shields.io/github/followers/Soyal1007?style=social)](https://github.com/Soyal1007)
 &nbsp;
