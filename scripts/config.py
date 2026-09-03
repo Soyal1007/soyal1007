@@ -6,7 +6,7 @@ User can edit information here to automatically update generated profile assets.
 # GitHub Account Info
 USERNAME = "Soyal1007"
 FULL_NAME = "Soyal"
-CURRENT_ROLE = "Full-Stack Developer & Software Engineer"
+CURRENT_ROLE = "Software Engineer"
 LOCATION = "India"
 BIO = "Passionate developer crafting modern web applications, mobile platforms, and high-performance developer tools."
 AVATAR_URL = f"https://avatars.githubusercontent.com/u/150875873?v=4"
@@ -22,6 +22,9 @@ TECH_STACK = {
 # Social / Contact Links
 SOCIAL_LINKS = {
     "GitHub": f"https://github.com/{USERNAME}",
+    "Instagram": f"https://instagram.com/{USERNAME}",
+    "LinkedIn": f"https://linkedin.com/in/{USERNAME}",
+    "X": f"https://x.com/{USERNAME}",
     "Email": "mailto:soyal@example.com",
 }
 

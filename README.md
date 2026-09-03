@@ -1,19 +1,36 @@
 <div align="center">
 
-<!-- BANNER: Animated Typing Header — Orbitron font, single clean intro -->
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Orbitron&weight=900&size=36&duration=2500&pause=1200&color=00F2FE&center=true&vCenter=true&multiline=false&width=600&height=70&lines=Hi+%F0%9F%91%8B+I'm+Soyal.)](https://git.io/typing-svg)
+<!-- BANNER: Animated Typing Header — Righteous font in Glowing Gold (#FFD700) -->
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Righteous&weight=700&size=38&duration=2500&pause=1200&color=FFD700&center=true&vCenter=true&multiline=false&width=600&height=70&lines=Hi+%F0%9F%91%8B+I'm+Soyal.)](https://git.io/typing-svg)
 
-<!-- Subtitle in a smaller, elegant font -->
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=500&size=18&duration=3000&pause=1500&color=8B949E&center=true&vCenter=true&multiline=false&width=600&height=40&lines=crafting+intelligent+software+%F0%9F%9A%80;building+tools+that+matter+%E2%9A%A1;pushing+commits%2C+not+limits+%F0%9F%94%A5)](https://git.io/typing-svg)
+<!-- Subtitle in Outfit font, Cyan (#00F2FE) -->
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Outfit&weight=600&size=19&duration=3000&pause=1500&color=00F2FE&center=true&vCenter=true&multiline=false&width=600&height=40&lines=crafting+intelligent+software+%F0%9F%9A%80;building+tools+that+matter+%E2%9A%A1;pushing+commits%2C+not+limits+%F0%9F%94%A5)](https://git.io/typing-svg)
 
 <br/>
 
-<p>
-  <a href="https://github.com/Soyal1007">
-    <img src="https://img.shields.io/badge/GitHub-Soyal1007-00f2fe?style=for-the-badge&logo=github&logoColor=white" />
+<!-- CONNECT WITH ME / SOCIALS -->
+<p align="center">
+  <a href="https://instagram.com/soyal1007" target="_blank">
+    <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" alt="Instagram" />
   </a>
   &nbsp;
-  <img src="https://komarev.com/ghpvc/?username=Soyal1007&style=for-the-badge&color=ffd700&label=PROFILE+VIEWS" />
+  <a href="https://linkedin.com/in/soyal1007" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  &nbsp;
+  <a href="https://x.com/soyal1007" target="_blank">
+    <img src="https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white" alt="X / Twitter" />
+  </a>
+  &nbsp;
+  <a href="mailto:soyal@example.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/Soyal1007">
+    <img src="https://img.shields.io/badge/GitHub-Soyal1007-00f2fe?style=for-the-badge&logo=github&logoColor=black" alt="GitHub" />
+  </a>
+  &nbsp;
+  <img src="https://komarev.com/ghpvc/?username=Soyal1007&style=for-the-badge&color=ffd700&label=PROFILE+VIEWS" alt="Profile Views" />
 </p>
 
 </div>
@@ -25,12 +42,12 @@
 <tr>
 <td width="50%" align="center" valign="middle">
 
-<img src="./avi-ascii.gif?v=9" width="98%" alt="Soyal — ASCII Video Portrait" />
+<img src="./avi-ascii.gif?v=10" width="98%" alt="Soyal — ASCII Video Portrait" />
 
 </td>
 <td width="50%" align="center" valign="middle">
 
-<img src="./info-card.svg?v=9" width="98%" alt="Soyal — Developer Profile" />
+<img src="./info-card.svg?v=10" width="98%" alt="Soyal — Developer Profile" />
 
 </td>
 </tr>
@@ -44,7 +61,7 @@
 ### `git log --contributions --year`
 
 <a href="https://github.com/Soyal1007">
-  <img src="./contrib-heatmap.svg?v=9" alt="Contribution Heatmap" width="100%" />
+  <img src="./contrib-heatmap.svg?v=10" alt="Contribution Heatmap" width="100%" />
 </a>
 
 </div>
@@ -103,7 +120,7 @@
 ## 📊 GitHub Analytics
 
 <div align="center">
-  <img src="./stats-card.svg?v=9" alt="GitHub Analytics" width="100%" />
+  <img src="./stats-card.svg?v=10" alt="GitHub Analytics" width="100%" />
 </div>
 
 ---
@@ -112,6 +129,10 @@
 
 **`>_ crafted with obsession · pushed with purpose`**
 
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=social&logo=instagram)](https://instagram.com/soyal1007)
+&nbsp;
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=social&logo=linkedin)](https://linkedin.com/in/soyal1007)
+&nbsp;
 [![GitHub followers](https://img.shields.io/github/followers/Soyal1007?style=social)](https://github.com/Soyal1007)
 &nbsp;
 [![GitHub stars](https://img.shields.io/github/stars/Soyal1007?style=social)](https://github.com/Soyal1007)
