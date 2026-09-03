@@ -18,9 +18,9 @@
 
 <!-- Hero Section: Perfectly Aligned Side-by-Side Cards (No Table Border Artifacts) -->
 <p align="center">
-  <img src="./avi-ascii.svg" width="48%" alt="Soyal ASCII Portrait" />
+  <img src="./avi-ascii.svg?v=3" width="48%" alt="Soyal ASCII Portrait" />
   &nbsp;&nbsp;
-  <img src="./info-card.svg" width="48%" alt="Soyal Developer Info Card" />
+  <img src="./info-card.svg?v=3" width="48%" alt="Soyal Developer Info Card" />
 </p>
 
 <br />
@@ -29,7 +29,7 @@
 <div align="center">
   <h2><code>git log --contributions --year</code></h2>
   <a href="https://github.com/Soyal1007">
-    <img src="./contrib-heatmap.svg" alt="Soyal GitHub Contribution Heatmap" width="100%" />
+    <img src="./contrib-heatmap.svg?v=3" alt="Soyal GitHub Contribution Heatmap" width="100%" />
   </a>
 </div>
 
