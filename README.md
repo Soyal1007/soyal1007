@@ -77,8 +77,7 @@
 ## 📈 GitHub Analytics
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Soyal1007&show_icons=true&theme=dark&bg_color=090d16&title_color=00f2fe&icon_color=ffd700&text_color=e6edf3&border_color=30363d" alt="Soyal GitHub Stats" width="48%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Soyal1007&layout=compact&theme=dark&bg_color=090d16&title_color=00f2fe&text_color=e6edf3&border_color=30363d" alt="Top Languages" width="48%" />
+  <img src="./stats-card.svg?v=3" alt="Soyal GitHub Analytics & Stats" width="100%" />
 </div>
 
 <br />

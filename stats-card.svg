@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 220" width="820" height="220">
+  <!-- Container Box -->
+  <rect width="820" height="220" x="0" y="0" fill="#090d16" rx="14" ry="14" stroke="#30363d" stroke-width="1.5" />
+
+  <!-- Header Bar -->
+  <path d="M 0 14 C 0 6.27 6.27 0 14 0 L 806 0 C 813.73 0 820 6.27 820 14 L 820 38 L 0 38 Z" fill="#161b22" />
+  <line x1="0" y1="38" x2="820" y2="38" stroke="#30363d" stroke-width="1" />
+
+  <!-- Terminal Window Controls -->
+  <circle cx="22" cy="19" r="5" fill="#ff5f56" />
+  <circle cx="38" cy="19" r="5" fill="#ffbd2e" />
+  <circle cx="54" cy="19" r="5" fill="#27c93f" />
+
+  <!-- Header Title -->
+  <text x="72" y="23" fill="#8b949e" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="11.5px" font-weight="600">soyal1007@github:~$ git stats --analytics</text>
+
+  <!-- Left Column: Metrics -->
+  <g transform="translate(32, 60)">
+    <!-- Public Repos -->
+    <g transform="translate(0, 20)">
+      <text x="0" y="0" fill="#8b949e" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="13px" font-weight="600">📦 Public Repositories:</text>
+      <text x="210" y="0" fill="#00f2fe" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="14px" font-weight="700">4</text>
+    </g>
+
+    <!-- Stars -->
+    <g transform="translate(0, 56)">
+      <text x="0" y="0" fill="#8b949e" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="13px" font-weight="600">🌟 Total Stars Earned:</text>
+      <text x="210" y="0" fill="#ffd700" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="14px" font-weight="700">0</text>
+    </g>
+
+    <!-- Followers -->
+    <g transform="translate(0, 92)">
+      <text x="0" y="0" fill="#8b949e" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="13px" font-weight="600">👥 GitHub Followers:</text>
+      <text x="210" y="0" fill="#3fb950" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="14px" font-weight="700">3</text>
+    </g>
+
+    <!-- Status -->
+    <g transform="translate(0, 128)">
+      <text x="0" y="0" fill="#8b949e" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="13px" font-weight="600">⚡ Developer Status:</text>
+      <text x="210" y="0" fill="#bc8cff" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="13px" font-weight="700">Active Contributor</text>
+    </g>
+  </g>
+
+  <!-- Divider Line -->
+  <line x1="390" y1="56" x2="390" y2="194" stroke="#30363d" stroke-width="1.2" stroke-dasharray="4 3" />
+
+  <!-- Right Column: Top Languages -->
+  <g transform="translate(420, 60)">
+    <text x="0" y="16" fill="#f0f6fc" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="13px" font-weight="700">📊 Top Languages &amp; Stack</text>
+
+    <!-- HTML -->
+    <g transform="translate(0, 46)">
+      <text x="0" y="0" fill="#c9d1d9" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12px" font-weight="600">HTML</text>
+      <text x="320" y="0" fill="#00f2fe" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12px" font-weight="700" text-anchor="end">50%</text>
+
+      <!-- Progress Bar Track -->
+      <rect x="0" y="8" width="320" height="8" fill="#161b22" rx="4" ry="4" stroke="#30363d" stroke-width="0.8" />
+      <!-- Progress Bar Fill -->
+      <rect x="0" y="8" width="120" height="8" fill="#00f2fe" rx="4" ry="4" />
+    </g>
+
+    <!-- Python -->
+    <g transform="translate(0, 78)">
+      <text x="0" y="0" fill="#c9d1d9" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12px" font-weight="600">Python</text>
+      <text x="320" y="0" fill="#3fb950" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12px" font-weight="700" text-anchor="end">50%</text>
+
+      <!-- Progress Bar Track -->
+      <rect x="0" y="8" width="320" height="8" fill="#161b22" rx="4" ry="4" stroke="#30363d" stroke-width="0.8" />
+      <!-- Progress Bar Fill -->
+      <rect x="0" y="8" width="120" height="8" fill="#3fb950" rx="4" ry="4" />
+    </g>
+  </g>
+</svg>
