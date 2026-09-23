@@ -45,7 +45,7 @@
     <!-- Metric 2 -->
     <rect x="288" y="0" width="132" height="74" rx="8" ry="8" fill="#0d1117" stroke="#21262d" stroke-width="1"/>
     <text x="354" y="22" text-anchor="middle" fill="#3fb950" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="18px">👥</text>
-    <text x="354" y="44" text-anchor="middle" fill="#3fb950" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="20px" font-weight="700">3</text>
+    <text x="354" y="44" text-anchor="middle" fill="#3fb950" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="20px" font-weight="700">4</text>
     <text x="354" y="62" text-anchor="middle" fill="#6e7681" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="10px">Followers</text>
 
     <!-- Metric 3 -->
