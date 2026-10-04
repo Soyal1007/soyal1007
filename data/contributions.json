@@ -1,14 +1,8 @@
 {
   "username": "Soyal1007",
   "total": 95,
-  "count_days": 371,
+  "count_days": 365,
   "days": [
-    {
-      "date": "2025-09-28",
-      "count": 0,
-      "level": 0,
-      "tooltip": "No contributions on September 28th."
-    },
     {
       "date": "2025-10-05",
       "count": 0,
@@ -322,10 +316,10 @@
       "tooltip": "6 contributions on September 27th."
     },
     {
-      "date": "2025-09-29",
+      "date": "2026-10-04",
       "count": 0,
       "level": 0,
-      "tooltip": "No contributions on September 29th."
+      "tooltip": "No contributions on October 4th."
     },
     {
       "date": "2025-10-06",
@@ -640,12 +634,6 @@
       "tooltip": "No contributions on September 28th."
     },
     {
-      "date": "2025-09-30",
-      "count": 0,
-      "level": 0,
-      "tooltip": "No contributions on September 30th."
-    },
-    {
       "date": "2025-10-07",
       "count": 0,
       "level": 0,
@@ -956,12 +944,6 @@
       "count": 2,
       "level": 1,
       "tooltip": "2 contributions on September 29th."
-    },
-    {
-      "date": "2025-10-01",
-      "count": 0,
-      "level": 0,
-      "tooltip": "No contributions on October 1st."
     },
     {
       "date": "2025-10-08",
@@ -1276,12 +1258,6 @@
       "tooltip": "No contributions on September 30th."
     },
     {
-      "date": "2025-10-02",
-      "count": 0,
-      "level": 0,
-      "tooltip": "No contributions on October 2nd."
-    },
-    {
       "date": "2025-10-09",
       "count": 0,
       "level": 0,
@@ -1594,12 +1570,6 @@
       "tooltip": "No contributions on October 1st."
     },
     {
-      "date": "2025-10-03",
-      "count": 0,
-      "level": 0,
-      "tooltip": "No contributions on October 3rd."
-    },
-    {
       "date": "2025-10-10",
       "count": 0,
       "level": 0,
@@ -1910,12 +1880,6 @@
       "count": 0,
       "level": 0,
       "tooltip": "No contributions on October 2nd."
-    },
-    {
-      "date": "2025-10-04",
-      "count": 0,
-      "level": 0,
-      "tooltip": "No contributions on October 4th."
     },
     {
       "date": "2025-10-11",
